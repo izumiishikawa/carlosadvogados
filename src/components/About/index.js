@@ -7,19 +7,27 @@ import { ItemRow, Marker } from "./styles";
 import law_hammer from "../../assets/imgs/law-hammer.jpg";
 import bg_logo from "../../assets/imgs/bg_logo.png";
 
-export default function About() {
+export default function About({ refs }) {
   return (
-    <div className="relative max-sm:mb-52">
+    <div className="relative max-sm:mb-52" ref={refs}>
       <div className="w-full h-32 text-white flex flex-row max-lg:justify-center gap-10 px-20 max-sm:px-2 max-sm:gap-4 items-center bg-[#af8b45]">
         <h1 className="text-4xl font-extrabold max-md:text-2xl">
-          1400+ <h2 className="text-lg font-normal max-md:text-sm max-sm:text-xs">Resultados comprovados</h2>
+          1400+{" "}
+          <h2 className="text-lg font-normal max-md:text-sm max-sm:text-xs">
+            Resultados comprovados
+          </h2>
         </h1>
         <h1 className="text-4xl font-extrabold max-md:text-2xl">
-          1200+ <h2 className="text-lg font-normal max-md:text-sm max-sm:text-xs">Clientes Satisfeitos</h2>
+          1200+{" "}
+          <h2 className="text-lg font-normal max-md:text-sm max-sm:text-xs">
+            Clientes Satisfeitos
+          </h2>
         </h1>
         <h1 className="text-4xl font-extrabold max-2xl:hidden max-lg:block max-md:text-2xl ">
           900+{" "}
-          <h2 className="text-lg font-normal max-md:text-sm max-sm:text-xs">Casos Resolvidos</h2>
+          <h2 className="text-lg font-normal max-md:text-sm max-sm:text-xs">
+            Casos Resolvidos
+          </h2>
         </h1>
       </div>
 
@@ -32,25 +40,25 @@ export default function About() {
           </h1>
 
           <p>
-            Na Carlos Advogados de Resultado, nossa missão é transformar
-            desafios jurídicos em soluções concretas e eficientes. Especialistas
-            em Direito Empresarial e Trabalhista, oferecemos estratégias
-            inteligentes e personalizadas para atender às necessidades
-            específicas de cada cliente.
+            Na Carlos Advogados de Resultado, transformamos desafios jurídicos
+            em soluções práticas e eficientes. Somos especialistas em Direito
+            Empresarial e Trabalhista, oferecendo estratégias personalizadas
+            para atender às necessidades de cada cliente.
           </p>
           <p>
-            Combinando experiência sólida e inovação, nos destacamos pela
-            agilidade e excelência no atendimento. Nossa abordagem única
-            prioriza a confiança, a ética e a transparência em todas as etapas,
-            garantindo segurança e tranquilidade em cada decisão.
+            Combinamos experiência sólida e inovação para garantir agilidade e
+            excelência no atendimento. Nosso compromisso com confiança, ética e
+            transparência guia todas as etapas do processo, proporcionando
+            segurança e tranquilidade em cada decisão.
           </p>
           <p>
-            Seja na prevenção ou na resolução de conflitos, somos sinônimo de
-            compromisso e resultados. Escolha Carlos Advogados de Resultado e
-            descubra um novo padrão de eficiência no setor jurídico.
+            Seja para prevenir ou resolver conflitos, estamos prontos para
+            entregar resultados concretos e eficientes. Conte com a Carlos
+            Advogados de Resultado e experimente um novo padrão de qualidade no
+            setor jurídico.
           </p>
           <div className="mt-10">
-            <Button text="Ler mais.." onClick={() => {}} />
+            <Button text="Fale com a gente" onClick={() => {}} />
           </div>
         </div>
         <div className="w-[50%] max-w-[600px] h-full max-h-[950px] right-20 absolute max-lg:hidden max-2xl:right-8 top-0 bg-blue-100 max-2xl:max-w-[500px]">

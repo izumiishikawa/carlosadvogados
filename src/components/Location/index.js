@@ -5,7 +5,7 @@ import { TileLayer, Marker, Popup } from "react-leaflet";
 import logo from "../../assets/imgs/bg_logo.png"
 import L from "leaflet";
 
-export default function Location() {
+export default function Location({refs}) {
   const MarkerIcon = L.icon({
     iconUrl: logo,
     className: "rounded-full",
@@ -18,6 +18,7 @@ export default function Location() {
     <div
       className="flex flex-col p-16 text-center
      items-center gap-10 w-[80%] max-lg:w-[100%] mx-auto"
+     ref={refs}
     >
       <div>
         <h1 className="text-3xl font-semibold tracking-widest">

@@ -27,9 +27,11 @@ function Header(props) {
   }
 
   const menuItems = [
-    { label: "Sobre mim", target: "about" },
+    { label: "Sobre nós", target: "about" },
     { label: "Serviços", target: "services" },
-    { label: "Informações", target: "posts" },
+    { label: "Nossa Equipe", target: "team" },
+    { label: "Depoimentos", target: "testimonials" },
+    { label: "Localização", target: "location" },
     { label: "Contato", target: "contact" },
   ];
 
@@ -45,12 +47,14 @@ function Header(props) {
           src={logo}
           className="logo"
           onClick={() => props.scrollTo("home")}
+          alt="Logo"
         />
         <ul>
-          <li onClick={() => props.scrollTo("about")}>Sobre mim</li>
-          <li onClick={() => props.scrollTo("services")}>Serviços</li>
-          <li onClick={() => props.scrollTo("posts")}>Informações</li>
-          <li onClick={() => props.scrollTo("contact")}>Contato</li>
+          {menuItems.map((menuItem) => (
+            <li key={menuItem.target} onClick={() => props.scrollTo(menuItem.target)}>
+              {menuItem.label}
+            </li>
+          ))}
         </ul>
         <div className="icons">
           <RiWhatsappFill
@@ -83,7 +87,6 @@ function Header(props) {
                 {menuItem.label}
               </li>
             ))}
-
             <li className="icons-mobile">
               <RiWhatsappFill
                 onClick={() =>

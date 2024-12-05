@@ -10,6 +10,7 @@ export const MessageBtn = styled.div`
   align-items: center;
   gap: 10px;
   background-color: #2c282b;
+  cursor: pointer;
 `;
 
 export const MessageInput = styled.input`
@@ -19,6 +20,7 @@ export const MessageInput = styled.input`
   outline: none;
   font-size: 14px;
   background-color: transparent;
+  cursor: pointer;
 `;
 
 export const SocialIcons = styled.div`

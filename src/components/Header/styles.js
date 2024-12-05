@@ -30,7 +30,6 @@ export const Container = styled.div`
 
       ul li {
         font-weight: 700;
-
       }
     `}
 
@@ -76,7 +75,6 @@ export const Container = styled.div`
     svg {
       cursor: pointer;
     }
-
   }
 
   ul {
@@ -90,18 +88,32 @@ export const Container = styled.div`
     font-weight: 500;
     font-size: 12px;
 
-
-    :hover {
-      transform: scale(1.1);
-      margin: 0 30px;
-    }
-
     li {
       cursor: pointer;
-      padding: 0px;
-      margin: 0px;
+      padding: 6px;
+      margin: 0;
       height: fit-content;
+      position: relative;
       transition: all 0.2s;
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2.5px;
+        width: 0%;
+        border-radius: 20px;
+        background: #bd9d60;
+        transition: all 0.4s ease;
+      }
+      &:hover:before {
+        width: 100%;
+      }
+
+      &:hover {
+        color: #bd9d60;
+      }
     }
   }
 
@@ -143,6 +155,10 @@ export const MobileMenu = styled.div`
       cursor: pointer;
       text-transform: uppercase;
       font-weight: 900;
+
+      :hover:before {
+        width: 100%;
+      }
     }
 
     .icons-mobile {
@@ -154,23 +170,18 @@ export const MobileMenu = styled.div`
         cursor: pointer;
       }
     }
-
   }
 
   @keyframes fadeIn {
     from {
       opacity: 0;
       height: 0px;
-      transform: translateY(
-        -100%
-      ); /* Adicione esta linha para animar o translateY */
+      transform: translateY(-100%);
     }
     to {
       opacity: 1;
       height: 100vh;
-      transform: translateY(
-        0%
-      ); /* Adicione esta linha para animar o translateY */
+      transform: translateY(0%);
     }
   }
 `;

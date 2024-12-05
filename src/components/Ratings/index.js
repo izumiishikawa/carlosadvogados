@@ -2,9 +2,9 @@ import React from "react";
 import Rating from "react-rating";
 import { FaStar } from "react-icons/fa6";
 
-export default function Ratings() {
+export default function Ratings({refs}) {
   return (
-    <div className="bg-[#2c282b] w-full">
+    <div className="bg-[#2c282b] w-full" ref={refs}>
       <div className="pt-60 pb-20 flex justify-center flex-col items-center gap-20  text-white max-lg:pt-[700px]">
         <h1 className="text-lg font-semibold tracking-widest">NOSSOS CLIENTES</h1>
         <div className="flex justify-center flex-wrap items-start gap-8">

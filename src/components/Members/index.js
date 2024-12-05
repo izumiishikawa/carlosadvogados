@@ -2,13 +2,14 @@ import React from "react";
 import MembersCard from "../MembersCard";
 import placeholder from "../../assets/imgs/placeholder.jpg";
 import Button from "../Button";
-import statue from "../../assets/imgs/statue.jpg"
+import statue from "../../assets/imgs/statue.jpg";
 
-
-export default function Members() {
+export default function Members({ refs }) {
   return (
-    <div className="mt-[300px] flex flex-col items-center">
-      <h1 className="text-3xl font-bold tracking-widest text-center">NOSSOS ADVOGADOS</h1>
+    <div className="mt-[300px] flex flex-col items-center" ref={refs}>
+      <h1 className="text-3xl font-bold tracking-widest text-center">
+        NOSSOS ADVOGADOS
+      </h1>
       <h2 className="italic text-lg font-[Lora] text-center max-w-[90%]">
         Excelência e confiança para proteger seus direitos
       </h2>
@@ -32,7 +33,10 @@ export default function Members() {
             <MembersCard />
           </div>
           <div className="relative -top-10 w-fit h-fit">
-            <img src={statue} className="w-[400px] z-[999] max-sm:max-w-[90%] max-sm:mx-auto" />
+            <img
+              src={statue}
+              className="w-[400px] z-[999] max-sm:max-w-[90%] max-sm:mx-auto"
+            />
           </div>
         </div>
 
@@ -43,12 +47,12 @@ export default function Members() {
             </h1>
             <p className="font-normal text-sm">
               Na Carlos Advogados de Resultado, transformamos desafios complexos
-              em vitórias concretas. Nossa equipe vai além da análise jurídica:
-              estudamos cada detalhe do seu caso para entregar estratégias
-              inovadoras que fazem a diferença. Com foco em Direito Empresarial,
-              Trabalhista e resoluções de alta complexidade, somos conhecidos
-              por superar expectativas e trazer soluções que outros acreditam
-              ser inalcançáveis. Confie em quem sabe como vencer.
+              em vitórias reais. Nossa equipe vai além da análise jurídica,
+              estudando cada detalhe do seu caso para criar estratégias
+              inovadoras e eficazes. Com foco em Direito Empresarial,
+              Trabalhista e soluções de alta complexidade, somos reconhecidos
+              por superar expectativas e entregar resultados que outros
+              consideram inalcançáveis. Confie em quem sabe como vencer.
             </p>
             <Button text="PRECISA DE NÓS?" />
           </div>
