@@ -5,7 +5,8 @@ import previdenciaria from "../../assets/imgs/previdenciaria.jpg";
 import criminal from "../../assets/imgs/criminal.png";
 import trabalhista from "../../assets/imgs/trabalhista.jpg";
 import civel from "../../assets/imgs/civel.jpg";
-import { FaHandcuffs } from "react-icons/fa6";
+import possessorio from "../../assets/imgs/possessorio.jpg";
+import { FaHandcuffs, FaGavel } from "react-icons/fa6";
 import { MdHandyman, MdPersonSearch } from "react-icons/md";
 
 export default function Lawyers({ refs }) {
@@ -31,7 +32,6 @@ export default function Lawyers({ refs }) {
         <h2 className="italic text-lg font-[Lora] text-center">
           Soluções jurídicas sob medida para você
         </h2>
-
         <div className="flex flex-row gap-1 mt-20 flex-wrap justify-center">
           <InfoCard
             background={civel}
@@ -42,20 +42,26 @@ export default function Lawyers({ refs }) {
           <InfoCard
             background={previdenciaria}
             icon={<MdPersonSearch size={90} />}
-            title="previdênciaria"
+            title="PREVIDENCIÁRIA"
             text="Atua na defesa dos direitos dos segurados do INSS, lidando com aposentadorias, benefícios e revisões, assegurando suporte completo ao cidadão."
           />
           <InfoCard
             background={trabalhista}
             icon={<MdHandyman size={90} />}
-            title="trabalhista"
+            title="TRABALHISTA"
             text="Focamos nas relações entre empregados e empregadores, atuando em direitos trabalhistas, rescisões, acordos e ações judiciais relacionadas à legislação do trabalho."
           />
           <InfoCard
             background={criminal}
             icon={<FaHandcuffs size={90} />}
-            title="criminal"
+            title="CRIMINAL"
             text="Defendemos os direitos de acusados em crimes, atuando em investigações e julgamentos para garantir justiça, liberdade e o cumprimento das garantias legais."
+          />
+          <InfoCard
+            background={possessorio}
+            icon={<FaGavel size={90} />}
+            title="POSSESSÓRIO"
+            text="Direcionado às relações de posse e propriedade, o Direito Possessório visa proteger o exercício da posse, resolver conflitos sobre bens imóveis e assegurar direitos relacionados à propriedade e usucapião."
           />
         </div>
       </div>

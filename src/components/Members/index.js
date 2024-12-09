@@ -3,8 +3,15 @@ import MembersCard from "../MembersCard";
 import placeholder from "../../assets/imgs/placeholder.jpg";
 import Button from "../Button";
 import statue from "../../assets/imgs/statue.jpg";
+import carlos from "../../assets/imgs/carlos.jpg";
+import marcos from "../../assets/imgs/marcoss.jpg";
+import aspas from "../../assets/imgs/aspas.png";
 
 export default function Members({ refs }) {
+  const collaborators = [
+    { name: "Maurício Moreira da Silva Junior", oab: "OAB/MG 184.548" },
+  ];
+
   return (
     <div className="mt-[300px] flex flex-col items-center" ref={refs}>
       <h1 className="text-3xl font-bold tracking-widest text-center">
@@ -28,14 +35,23 @@ export default function Members({ refs }) {
         </svg>
       </div>
       <div className="bg-[#e6e0e4] gap-20 h-[860px] w-full flex flex-row justify-center relative max-lg:h-[1400px]">
-        <div className="absolute flex gap-20 -top-24 flex-row max-lg:flex-col items-center">
+        <div className="absolute flex gap-20 -top-24 flex-row max-lg:flex-col-reverse items-center">
           <div className="">
-            <MembersCard />
+            <MembersCard
+              photo={marcos}
+              name="Marcos Oliveira Fernandes Junior"
+              oab="OAB/MG 098.233"
+              description="Advogado especializado em direito criminal bancário e securitário"
+            />
           </div>
           <div className="relative -top-10 w-fit h-fit">
-            <img
-              src={statue}
-              className="w-[400px] z-[999] max-sm:max-w-[90%] max-sm:mx-auto"
+            <MembersCard
+              photo={carlos}
+              quoteImage={aspas}
+              name="Carlos Alberto J Damaceno"
+              oab="OAB/MG 172.922"
+              description="Advogado especializado em Direito Empresarial, Trabalhista e Previdenciário, oferecendo soluções eficazes e personalizadas"
+              collaborators={collaborators}
             />
           </div>
         </div>
