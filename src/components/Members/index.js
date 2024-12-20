@@ -42,7 +42,7 @@ export default function Members({ refs }) {
               photo={mauricio}
               name="Maurício Moreira da Silva Junior"
               oab="OAB/MG 184.548"
-              description="Advogado especializado em Direito Direito digital, Direito administrativo e Condomínios"
+              description="Advogado especializado em Direito Digital, Administrativo e Condomínios"
             />
           </div>
           <div className="relative -top-14 w-fit h-fit">
