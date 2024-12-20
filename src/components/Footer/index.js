@@ -1,14 +1,23 @@
 import React from "react";
 import logo from "../../assets/imgs/logo.png";
 import { MessageBtn, MessageInput, SocialIcons } from "./styles";
-import { BsFacebook, BsInstagram, BsLinkedin, BsTiktok, BsWhatsapp } from "react-icons/bs";
+import {
+  BsFacebook,
+  BsInstagram,
+  BsLinkedin,
+  BsTiktok,
+  BsWhatsapp,
+} from "react-icons/bs";
 import { BiLocationPlus, BiPhone } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 import { FaLocationPin } from "react-icons/fa6";
 
-export default function Footer({refs}) {
+export default function Footer({ refs }) {
   return (
-    <div className="bg-[#1d191a] h-fit p-16 flex flex-col gap-7 items-center text-white max-md:px-10" ref={refs}>
+    <div
+      className="bg-[#1d191a] h-fit p-16 flex flex-col gap-7 items-center text-white max-md:px-10"
+      ref={refs}
+    >
       <img src={logo} className="w-28" />
       <h1 className="text-3xl tracking-widest text-center max-sm:text-xl">
         CARLOS / ADVOGADOS DE RESULTADO
@@ -20,8 +29,10 @@ export default function Footer({refs}) {
           <h2 className="font-normal max-sm:text-center">
             Defendemos seus direitos com experiência e dedicação.
           </h2>
-          <MessageBtn>
-            <MessageInput disabled placeholder="Envie sua mensagem!" />
+          <MessageBtn
+            onClick={() => window.open("https://wa.me/553491636838", "_blank")}
+          >
+          Envie sua mensagem!
             <BsWhatsapp size={30} />
           </MessageBtn>
         </div>

@@ -8,6 +8,7 @@ export const MessageBtn = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
   background-color: #2c282b;
   cursor: pointer;

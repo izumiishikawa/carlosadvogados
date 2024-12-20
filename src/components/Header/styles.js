@@ -12,7 +12,7 @@ export const Container = styled.div`
   position: fixed;
   background-color: transparent;
   top: 0;
-  z-index: 999999;
+  z-index: 999;
   transition: all 0.2s;
   color: #fff;
 

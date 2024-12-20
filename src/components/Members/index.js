@@ -10,6 +10,7 @@ import aspas from "../../assets/imgs/aspas.png";
 export default function Members({ refs }) {
   const collaborators = [
     { name: "Maurício Moreira da Silva Junior", oab: "OAB/MG 184.548" },
+    { name: "Marcos Oliveira Fernandes Junior", oab: "OAB/MG  098.233"}
   ];
 
   return (
@@ -35,15 +36,7 @@ export default function Members({ refs }) {
         </svg>
       </div>
       <div className="bg-[#e6e0e4] gap-20 h-[860px] w-full flex flex-row justify-center relative max-lg:h-[1400px]">
-        <div className="absolute flex gap-20 -top-24 flex-row max-lg:flex-col-reverse items-center">
-          <div className="">
-            <MembersCard
-              photo={marcos}
-              name="Marcos Oliveira Fernandes Junior"
-              oab="OAB/MG 098.233"
-              description="Advogado especializado em direito criminal bancário e securitário"
-            />
-          </div>
+        <div className="absolute flex gap-20 -top-24 flex-row max-lg:flex-col items-center">
           <div className="relative -top-10 w-fit h-fit">
             <MembersCard
               photo={carlos}
@@ -52,6 +45,12 @@ export default function Members({ refs }) {
               oab="OAB/MG 172.922"
               description="Advogado especializado em Direito Empresarial, Trabalhista e Previdenciário, oferecendo soluções eficazes e personalizadas"
               collaborators={collaborators}
+            />
+          </div>
+          <div className="relative -top-10">
+            <img
+              src={statue}
+              className="w-[400px] z-[999] max-sm:max-w-[90%] max-sm:mx-auto"
             />
           </div>
         </div>
@@ -70,7 +69,12 @@ export default function Members({ refs }) {
               por superar expectativas e entregar resultados que outros
               consideram inalcançáveis. Confie em quem sabe como vencer.
             </p>
-            <Button text="PRECISA DE NÓS?" />
+            <Button
+              onClick={() =>
+                window.open("https://wa.me/553491636838", "_blank")
+              }
+              text="PRECISA DE NÓS?"
+            />
           </div>
           <div className="w-[45%] max-lg:w-[100%]">
             <img className="" src={placeholder} />

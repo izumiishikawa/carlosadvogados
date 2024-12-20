@@ -58,7 +58,7 @@ export default function About({ refs }) {
             setor jurídico.
           </p>
           <div className="mt-10">
-            <Button text="Fale com a gente" onClick={() => {}} />
+            <Button text="Fale com a gente"         onClick={() => window.open("https://wa.me/553491636838", "_blank")} />
           </div>
         </div>
         <div className="w-[50%] max-w-[600px] h-full max-h-[950px] right-20 absolute max-lg:hidden max-2xl:right-8 top-0 bg-blue-100 max-2xl:max-w-[500px]">

@@ -18,12 +18,15 @@ export default function Hero({ refs }) {
         </h1>
 
         <div className="flex flex-row gap-4 items-center max-sm:flex-col">
-          <button className="p-4 px-16 rounded-full text-white bg-[#bd9d60] max-sm:w-full">
+          <button
+            onClick={() => window.open("https://wa.me/553491636838", "_blank")}
+            className="p-4 px-16 rounded-full text-white bg-[#bd9d60] max-sm:w-full"
+          >
             Fala conosco!
           </button>
-          <button className="p-4 px-16 rounded-full border max-sm:w-full">
+          {/* <button className="p-4 px-16 rounded-full border max-sm:w-full">
             Sobre nós
-          </button>
+          </button> */}
         </div>
       </div>
     </Container>
