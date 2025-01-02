@@ -43,7 +43,7 @@ export default function Footer({ refs }) {
           </p>
           <p className="flex flex-row items-center gap-4 whitespace-pre-wrap max-sm:flex-col">
             <MdEmail size={25} />
-            contato@carlosadvogadosderesultados.com
+            carlosadvogados.bs@gmail.com
           </p>
           <p className="flex flex-row items-center gap-4 max-sm:flex-col">
             <FaLocationPin size={25} />
