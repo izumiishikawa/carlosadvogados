@@ -35,14 +35,18 @@ export default function Members({ refs }) {
           ></path>
         </svg>
       </div>
-      <div className="bg-[#e6e0e4] gap-20 h-[860px] w-full flex flex-row justify-center relative max-lg:h-[1800px]">
+      <div className="bg-[#e6e0e4] gap-20 h-[1260px] w-full flex flex-row justify-center relative max-lg:h-[2600px]">
         <div className="absolute flex gap-20 -top-24 flex-row max-lg:flex-col-reverse items-center">
           <div className="relative -top-10 w-fit h-fit">
             <MembersCard
               photo={mauricio}
               name="Maurício Moreira da Silva Junior"
               oab="OAB/MG 184.548"
-              description="Advogado especializado em Direito Digital, Administrativo e Condomínios"
+              description="- Especialista em Direito Digital, com atuação em proteção de dados (LGPD), contratos tecnológicos e resolução de conflitos no ambiente virtual;
+- Experiência em Direito Administrativo, auxiliando servidores, empresas e cidadãos em processos administrativos, licitações e contratos públicos;
+- Atuação estratégica em questões relacionadas à gestão de condomínios, incluindo elaboração e revisão de convenções condominiais, mediação de conflitos entre moradores e cobranças de taxas;
+- Consultoria jurídica para empresas e indivíduos na adequação às normas de privacidade e segurança digital, prevenindo riscos e garantindo conformidade legal;
+- Representação em disputas administrativas e judiciais relacionadas a temas de direito público e privado;"
             />
           </div>
           <div className="relative -top-14 w-fit h-fit">
@@ -51,7 +55,13 @@ export default function Members({ refs }) {
               quoteImage={aspas}
               name="Carlos Alberto J Damaceno"
               oab="OAB/MG 172.922"
-              description="Advogado especializado em Direito Empresarial, Trabalhista e Previdenciário, oferecendo soluções eficazes e personalizadas"
+              description="- Especialista em Direito Empresarial, com foco em estruturação societária, contratos empresariais e assessoria estratégica para empresas de todos os portes;
+- Experiência em Direito Trabalhista, incluindo negociações coletivas, processos judiciais trabalhistas e consultoria preventiva para empregadores e empregados;
+- Especialista em Direito Previdenciário, auxiliando na obtenção de benefícios como aposentadorias, pensões e auxílios, tanto no INSS quanto em regimes próprios de previdência;
+- Consultoria e atuação em questões relacionadas à proteção patrimonial e planejamento sucessório, garantindo segurança jurídica e proteção dos interesses familiares;
+- Ampla experiência em questões relacionadas à responsabilidade civil, incluindo reparações por danos materiais e morais;
+- Pós-Graduado em Direito do Consumidor, atuando em litígios e soluções de conflitos envolvendo relações de consumo;
+- Assessoria jurídica personalizada, oferecendo suporte completo e estratégico para a resolução de problemas empresariais, trabalhistas e previdenciários."
               collaborators={collaborators}
             />
           </div>

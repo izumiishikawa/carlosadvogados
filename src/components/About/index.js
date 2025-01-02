@@ -98,7 +98,7 @@ export default function About({ refs }) {
             <div className="border-8 relative mt-10">
               <div className="absolute inset-0 flex justify-center text-left p-12 z-20 items-center">
                 <h1 className="text-white text-5xl font-bold">
-                  30+ Anos de experiência em advocacia
+                  10+ Anos de experiência em advocacia
                 </h1>
               </div>
               <div className="absolute bg-black opacity-85 h-full w-full" />

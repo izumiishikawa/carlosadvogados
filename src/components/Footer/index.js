@@ -52,18 +52,18 @@ export default function Footer({ refs }) {
         </div>
       </div>
       <div className="flex flex-row gap-4 mt-10 flex-wrap max-sm:justify-center max-sm:w-[90%]">
-        <SocialIcons>
+        {/* <SocialIcons>
           <BsInstagram size={25} />
-        </SocialIcons>
-        <SocialIcons>
+        </SocialIcons> */}
+        <SocialIcons onClick={() => window.open("https://www.linkedin.com/in/carlos-alberto-damaceno/", "_blank")}>
           <BsLinkedin size={25} />
         </SocialIcons>
-        <SocialIcons>
+        {/* <SocialIcons>
           <BsFacebook size={25} />
         </SocialIcons>
         <SocialIcons>
           <BsTiktok size={25} />
-        </SocialIcons>
+        </SocialIcons> */}
       </div>
       <small>©Mooncoded 2024. All rights reserved.</small>
     </div>
