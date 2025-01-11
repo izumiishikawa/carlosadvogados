@@ -4,7 +4,7 @@ import placeholder from "../../assets/imgs/placeholder.jpg";
 import Button from "../Button";
 import statue from "../../assets/imgs/statue.jpg";
 import carlos from "../../assets/imgs/carlos.jpg";
-import marcos from "../../assets/imgs/marcoss.jpg";
+import marcos from "../../assets/imgs/marcoscastro.jpeg";
 import mauricio from "../../assets/imgs/mauricio.jpeg";
 import aspas from "../../assets/imgs/aspas.png";
 
@@ -35,9 +35,23 @@ export default function Members({ refs }) {
           ></path>
         </svg>
       </div>
-      <div className="bg-[#e6e0e4] gap-20 h-[1260px] w-full flex flex-row justify-center relative max-lg:h-[2600px]">
+      <div className="bg-[#e6e0e4] gap-20 h-[1260px] w-full flex flex-row justify-center relative max-lg:h-[2900px]">
         <div className="absolute flex gap-20 -top-24 flex-row max-lg:flex-col-reverse items-center">
-          <div className="relative -top-10 w-fit h-fit">
+        <div className="relative -top-2 w-fit h-fit">
+            
+            <MembersCard
+              photo={marcos}
+              name="Marcos Oliveira Fernandes Junior"
+              oab="OAB/MG 098.233"
+              description="- Especialista em Direito Bancário, com atuação em questões relacionadas a contratos bancários, renegociação de dívidas, financiamentos e compliance no setor financeiro;
+- Experiência em Direito Criminal, incluindo defesa e acompanhamento em processos criminais, com enfoque em crimes financeiros, empresariais e cibernéticos;
+- Atuação estratégica em Direito Securitário, abrangendo a análise e revisão de apólices, mediação de conflitos entre seguradoras e segurados e suporte jurídico em sinistros;
+- Consultoria jurídica para empresas e indivíduos, garantindo conformidade com normas bancárias, securitárias e prevenção de riscos legais;
+- Representação em disputas administrativas e judiciais relacionadas a contratos bancários, litígios criminais e questões securitárias."
+            />
+          </div>
+          <div className="relative -top-24 w-fit h-fit">
+            
             <MembersCard
               photo={mauricio}
               name="Maurício Moreira da Silva Junior"
@@ -62,15 +76,14 @@ export default function Members({ refs }) {
 - Ampla experiência em questões relacionadas à responsabilidade civil, incluindo reparações por danos materiais e morais;
 - Pós-Graduado em Direito do Consumidor, atuando em litígios e soluções de conflitos envolvendo relações de consumo;
 - Assessoria jurídica personalizada, oferecendo suporte completo e estratégico para a resolução de problemas empresariais, trabalhistas e previdenciários."
-              collaborators={collaborators}
             />
           </div>
-          <div className="relative -top-10">
+          {/* <div className="relative -top-10">
             <img
               src={statue}
               className="w-[400px] z-[999] max-sm:max-w-[90%] max-sm:mx-auto"
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="w-[90%] h-full flex gap-20 p-16 flex-row justify-around items-center max-h-[500px] absolute -bottom-44 bg-[#1d191b] max-lg:flex-col-reverse max-lg:max-h-fit max-lg:-bottom-[600px]">
