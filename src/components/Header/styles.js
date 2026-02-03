@@ -136,7 +136,7 @@ export const MobileMenu = styled.div`
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 99999;
+  z-index: 998;
   left: 0;
   top: 0;
   opacity: 0;

@@ -1,43 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import { Container } from "./styles";
 import bg_logo from "../../assets/imgs/bg_logo.png";
-import { CSSTransition } from "react-transition-group";
-
-const getMaxWidth = () => (window.innerWidth < 1000 ? "90%" : "50%");
-
-const customStyles = {
-  content: {
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    zIndex: 999999,
-    backgroundColor: "#fff",
-    borderRadius: "8px",
-    padding: "20px",
-    width: "90%",
-    maxWidth: getMaxWidth(), // Ajusta o maxWidth dinamicamente
-    boxShadow: "0 4px 16px rgba(0, 0, 0, 0.2)",
-    opacity: 0, // Inicialmente transparente
-    transition: "opacity 300ms ease-in-out", // Animação de fade
-  },
-  overlay: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: "rgba(0, 0, 0, 0.75)",
-    zIndex: 9998,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-};
 
 // Certifique-se de definir o elemento principal do app para acessibilidade
 Modal.setAppElement("#root");
@@ -83,25 +47,41 @@ const descriptions = {
 export default function InfoCard({ icon, title, text, background, type }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const [styles, setStyles] = useState(customStyles);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setStyles((prevStyles) => ({
-        ...prevStyles,
-        content: {
-          ...prevStyles.content,
-          maxWidth: getMaxWidth(), // Atualiza o maxWidth com base no tamanho da janela
-        },
-      }));
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const modalStyles = {
+    content: {
+      position: "fixed",
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      zIndex: 1000001,
+      backgroundColor: "#fff",
+      borderRadius: "8px",
+      padding: "0",
+      width: "90%",
+      maxWidth: window.innerWidth < 768 ? "95%" : "600px",
+      maxHeight: "90vh",
+      overflow: "auto",
+      boxShadow: "0 4px 16px rgba(0, 0, 0, 0.2)",
+    },
+    overlay: {
+      position: "fixed",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: "rgba(0, 0, 0, 0.75)",
+      zIndex: 1000000,
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+  };
 
   return (
     <>
@@ -124,51 +104,42 @@ export default function InfoCard({ icon, title, text, background, type }) {
         </div>
       </Container>
 
-      <CSSTransition
-        in={isModalOpen}
-        timeout={300}
-        classNames="fade"
-        unmountOnExit
-        onEnter={() => (customStyles.content.opacity = 1)}
-        onExited={() => (customStyles.content.opacity = 0)}
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        style={modalStyles}
+        contentLabel="Info Modal"
       >
-        <Modal
-          isOpen={isModalOpen}
-          onRequestClose={closeModal}
-          style={styles}
-          contentLabel="Info Modal"
-        >
-          <div className="relative w-full p-6 rounded-lg text-black">
-            <button
-              onClick={closeModal}
-              className="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
-            >
-              X
-            </button>
-            <img
-              src={background}
-              alt="Banner"
-              className="w-full h-72 object-cover mb-4"
-            />
+        <div className="relative w-full p-4 sm:p-6 rounded-lg text-black">
+          <button
+            onClick={closeModal}
+            className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl font-bold z-10 bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-md"
+          >
+            ×
+          </button>
+          <img
+            src={background}
+            alt="Banner"
+            className="w-full h-48 sm:h-72 object-cover mb-4 rounded-lg"
+          />
 
-            <div className="flex flex-row gap-2 items-center justify-between my-4">
-              <h1 className="text-3xl my-4 font-extrabold tracking-wide">
-                DIREITO {title}
-              </h1>
-              <img className="w-14 rounded-full" src={bg_logo} />
-            </div>
-
-            <div className="h-[0.5px] w-[100%] bg-black" />
-
-            <div
-              className="text-base text-black"
-              style={{ whiteSpace: "pre-line" }}
-            >
-              {descriptions[type] || "Descrição detalhada não disponível."}
-            </div>
+          <div className="flex flex-row gap-2 items-center justify-between my-4">
+            <h1 className="text-xl sm:text-3xl font-extrabold tracking-wide">
+              DIREITO {title}
+            </h1>
+            <img className="w-10 sm:w-14 rounded-full" src={bg_logo} alt="Logo" />
           </div>
-        </Modal>
-      </CSSTransition>
+
+          <div className="h-[0.5px] w-full bg-black" />
+
+          <div
+            className="text-sm sm:text-base text-black mt-4"
+            style={{ whiteSpace: "pre-line" }}
+          >
+            {descriptions[type] || "Descrição detalhada não disponível."}
+          </div>
+        </div>
+      </Modal>
     </>
   );
 }

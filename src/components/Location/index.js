@@ -16,15 +16,14 @@ export default function Location({refs}) {
 
   return (
     <div
-      className="flex flex-col p-16 text-center
-     items-center gap-10 w-[80%] max-lg:w-[100%] mx-auto"
-     ref={refs}
+      className="flex flex-col p-6 sm:p-16 text-center items-center gap-6 sm:gap-10 w-[95%] sm:w-[80%] max-lg:w-[100%] mx-auto"
+      ref={refs}
     >
       <div>
-        <h1 className="text-3xl font-semibold tracking-widest">
+        <h1 className="text-xl sm:text-3xl font-semibold tracking-widest">
           NOSSA LOCALIZAÇÃO
         </h1>
-        <h2 className="italic text-lg max-w-[600px] mt-7 font-[Lora]">
+        <h2 className="italic text-sm sm:text-lg max-w-[600px] mt-4 sm:mt-7 font-[Lora]">
           Atuamos em diversas áreas do direito, com foco na defesa dos direitos
           do trabalhador e na concessão de benefícios previdenciários.
         </h2>
@@ -40,17 +39,17 @@ export default function Location({refs}) {
           </Popup>
         </Marker>
       </Map>
-      <div className="w-full flex gap-8 justify-start max-sm:flex-col">
+      <div className="w-full flex gap-6 sm:gap-8 justify-start flex-col sm:flex-row">
         <div className="flex flex-col text-left">
-          <h2 className="font-bold text-lg">Endereço</h2>
-          <h2 className="italic text-lg">
+          <h2 className="font-bold text-base sm:text-lg">Endereço</h2>
+          <h2 className="italic text-sm sm:text-lg">
             Av. Leopoldino de Oliveira, 4113 - salas 220/221
           </h2>
         </div>
         <div className="flex flex-col text-left">
-          <h2 className="font-bold text-lg">Horário</h2>
-          <h2 className="italic text-lg">
-          Seg a Sex das 08h às 18h
+          <h2 className="font-bold text-base sm:text-lg">Horário</h2>
+          <h2 className="italic text-sm sm:text-lg">
+            Seg a Sex das 08h às 18h
           </h2>
         </div>
       </div>

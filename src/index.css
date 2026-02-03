@@ -34,9 +34,21 @@
     left: 0;
     width: 100%;
     overflow: hidden;
-    margin-top: 100px;
+    margin-top: 40px;
     line-height: 0;
     transform: rotate(180deg);
+}
+
+@media (min-width: 640px) {
+  .custom-shape-divider-bottom-1732555316 {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom-shape-divider-bottom-1732555316 {
+    margin-top: 100px;
+  }
 }
 
 .custom-shape-divider-bottom-1732555316 svg {

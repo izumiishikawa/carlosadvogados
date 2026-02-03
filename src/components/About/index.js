@@ -9,33 +9,33 @@ import bg_logo from "../../assets/imgs/bg_logo.png";
 
 export default function About({ refs }) {
   return (
-    <div className="relative max-sm:mb-52" ref={refs}>
-      <div className="w-full h-32 text-white flex flex-row max-lg:justify-center gap-10 px-20 max-sm:px-2 max-sm:gap-4 items-center bg-[#af8b45]">
-        <h1 className="text-4xl font-extrabold max-md:text-2xl">
+    <div className="relative max-sm:mb-20" ref={refs}>
+      <div className="w-full h-auto py-6 sm:h-32 text-white flex flex-row flex-wrap max-lg:justify-center gap-6 sm:gap-10 px-4 sm:px-20 items-center justify-center bg-[#af8b45]">
+        <h1 className="text-2xl sm:text-4xl font-extrabold text-center">
           1400+{" "}
-          <h2 className="text-lg font-normal max-md:text-sm max-sm:text-xs">
+          <h2 className="text-sm sm:text-lg font-normal">
             Resultados comprovados
           </h2>
         </h1>
-        <h1 className="text-4xl font-extrabold max-md:text-2xl">
+        <h1 className="text-2xl sm:text-4xl font-extrabold text-center">
           1200+{" "}
-          <h2 className="text-lg font-normal max-md:text-sm max-sm:text-xs">
+          <h2 className="text-sm sm:text-lg font-normal">
             Clientes Satisfeitos
           </h2>
         </h1>
-        <h1 className="text-4xl font-extrabold max-2xl:hidden max-lg:block max-md:text-2xl ">
+        <h1 className="text-2xl sm:text-4xl font-extrabold text-center">
           900+{" "}
-          <h2 className="text-lg font-normal max-md:text-sm max-sm:text-xs">
+          <h2 className="text-sm sm:text-lg font-normal">
             Casos Resolvidos
           </h2>
         </h1>
       </div>
 
-      <div className="flex flex-row w-[80%] h-[1000px] m-auto justify-start gap-10 items-start pt-28">
-        <div className="w-[50%] flex flex-col gap-4 max-xl:w-[45%] max-lg:w-[100%]">
-          <img className="w-20 rounded-full" src={bg_logo} />
+      <div className="flex flex-row w-[90%] sm:w-[80%] h-auto min-h-[600px] lg:h-[1000px] m-auto justify-start gap-10 items-start pt-10 sm:pt-28 pb-10">
+        <div className="w-full lg:w-[50%] flex flex-col gap-4 max-xl:w-[45%] max-lg:w-[100%] px-2 sm:px-0">
+          <img className="w-16 sm:w-20 rounded-full" src={bg_logo} alt="Logo" />
           <b className="uppercase text-xs">Venha conosco</b>
-          <h1 className="text-5xl font-extrabold">
+          <h1 className="text-3xl sm:text-5xl font-extrabold">
             Lutamos por Justiça, Entregamos Resultados.
           </h1>
 

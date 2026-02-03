@@ -14,15 +14,15 @@ export default function Members({ refs }) {
   ];
 
   return (
-    <div className="mt-[300px] flex flex-col items-center" ref={refs}>
-      <h1 className="text-3xl font-bold tracking-widest text-center">
+    <div className="mt-20 sm:mt-[200px] lg:mt-[300px] flex flex-col items-center" ref={refs}>
+      <h1 className="text-2xl sm:text-3xl font-bold tracking-widest text-center px-4">
         NOSSOS ADVOGADOS
       </h1>
-      <h2 className="italic text-lg font-[Lora] text-center max-w-[90%]">
+      <h2 className="italic text-base sm:text-lg font-[Lora] text-center max-w-[90%]">
         Excelência e confiança para proteger seus direitos
       </h2>
 
-      <div class="custom-shape-divider-bottom-1732555316">
+      <div className="custom-shape-divider-bottom-1732555316">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -31,14 +31,14 @@ export default function Members({ refs }) {
         >
           <path
             d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
-            class="shape-fill"
+            className="shape-fill"
           ></path>
         </svg>
       </div>
-      <div className="bg-[#e6e0e4] gap-20 h-[1260px] w-full flex flex-row justify-center relative max-lg:h-[2900px]">
-        <div className="absolute flex gap-20 -top-24 flex-row max-lg:flex-col-reverse items-center">
-        <div className="relative -top-2 w-fit h-fit">
-            
+      <div className="bg-[#e6e0e4] w-full flex flex-col items-center pb-10">
+        {/* Cards dos advogados */}
+        <div className="flex gap-8 lg:gap-12 flex-col lg:flex-row items-center justify-center px-4 py-8 -mt-10">
+          <div className="w-full max-w-[350px]">
             <MembersCard
               photo={marcos}
               name="Marcos Oliveira Fernandes Junior"
@@ -50,8 +50,7 @@ export default function Members({ refs }) {
 - Representação em disputas administrativas e judiciais relacionadas a contratos bancários, litígios criminais e questões securitárias."
             />
           </div>
-          <div className="relative -top-24 w-fit h-fit">
-            
+          <div className="w-full max-w-[350px]">
             <MembersCard
               photo={mauricio}
               name="Maurício Moreira da Silva Junior"
@@ -63,7 +62,7 @@ export default function Members({ refs }) {
 - Representação em disputas administrativas e judiciais relacionadas a temas de direito público e privado;"
             />
           </div>
-          <div className="relative -top-14 w-fit h-fit">
+          <div className="w-full max-w-[350px]">
             <MembersCard
               photo={carlos}
               quoteImage={aspas}
@@ -78,17 +77,12 @@ export default function Members({ refs }) {
 - Assessoria jurídica personalizada, oferecendo suporte completo e estratégico para a resolução de problemas empresariais, trabalhistas e previdenciários."
             />
           </div>
-          {/* <div className="relative -top-10">
-            <img
-              src={statue}
-              className="w-[400px] z-[999] max-sm:max-w-[90%] max-sm:mx-auto"
-            />
-          </div> */}
         </div>
 
-        <div className="w-[90%] h-full flex gap-20 p-16 flex-row justify-around items-center max-h-[500px] absolute -bottom-44 bg-[#1d191b] max-lg:flex-col-reverse max-lg:max-h-fit max-lg:-bottom-[600px]">
-          <div className="flex flex-col w-[55%] max-lg:w-[100%] text-white gap-8 items-center justify-center text-wrap text-center">
-            <h1 className="text-4xl tracking-widest font-bold max-sm:text-2xl">
+        {/* Seção "Resolvemos o Impossível" */}
+        <div className="w-[95%] sm:w-[90%] flex gap-8 lg:gap-20 p-6 sm:p-16 flex-col lg:flex-row justify-around items-center bg-[#1d191b] mt-10">
+          <div className="flex flex-col w-full lg:w-[55%] text-white gap-6 sm:gap-8 items-center justify-center text-wrap text-center">
+            <h1 className="text-xl sm:text-2xl lg:text-4xl tracking-widest font-bold">
               RESOLVEMOS O IMPOSSÍVEL
             </h1>
             <p className="font-normal text-sm">
@@ -107,8 +101,8 @@ export default function Members({ refs }) {
               text="PRECISA DE NÓS?"
             />
           </div>
-          <div className="w-[45%] max-lg:w-[100%]">
-            <img className="" src={placeholder} />
+          <div className="w-full lg:w-[45%]">
+            <img className="w-full" src={placeholder} alt="Placeholder" />
           </div>
         </div>
       </div>

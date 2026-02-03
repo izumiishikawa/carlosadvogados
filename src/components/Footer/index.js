@@ -15,39 +15,39 @@ import { FaLocationPin } from "react-icons/fa6";
 export default function Footer({ refs }) {
   return (
     <div
-      className="bg-[#1d191a] h-fit p-16 flex flex-col gap-7 items-center text-white max-md:px-10"
+      className="bg-[#1d191a] h-fit p-8 sm:p-16 flex flex-col gap-5 sm:gap-7 items-center text-white"
       ref={refs}
     >
-      <img src={logo} className="w-28" />
-      <h1 className="text-3xl tracking-widest text-center max-sm:text-xl">
+      <img src={logo} className="w-20 sm:w-28" alt="Logo" />
+      <h1 className="text-lg sm:text-3xl tracking-widest text-center">
         CARLOS / ADVOGADOS DE RESULTADO
       </h1>
 
-      <div className="w-full flex flex-row mt-5 justify-center max-lg:flex-col mx-auto gap-20">
-        <div className="flex flex-col max-sm:items-center">
-          <h1 className="text-xl mb-2 max-sm:text-center">Fale Conosco!</h1>
-          <h2 className="font-normal max-sm:text-center">
+      <div className="w-full flex flex-col lg:flex-row mt-5 justify-center mx-auto gap-10 lg:gap-20">
+        <div className="flex flex-col items-center lg:items-start">
+          <h1 className="text-lg sm:text-xl mb-2 text-center lg:text-left">Fale Conosco!</h1>
+          <h2 className="font-normal text-sm sm:text-base text-center lg:text-left">
             Defendemos seus direitos com experiência e dedicação.
           </h2>
           <MessageBtn
             onClick={() => window.open("https://wa.me/553491636838", "_blank")}
           >
-          Envie sua mensagem!
-            <BsWhatsapp size={30} />
+            Envie sua mensagem!
+            <BsWhatsapp size={25} />
           </MessageBtn>
         </div>
-        <div className=" flex flex-col gap-4 text-center">
-          <p className="flex flex-row items-center gap-4 max-sm:flex-col">
-            <BiPhone size={25} />
+        <div className="flex flex-col gap-4 text-center items-center lg:items-start">
+          <p className="flex flex-row items-center gap-4 text-sm sm:text-base">
+            <BiPhone size={20} />
             +55 (34) 99163-6838
           </p>
-          <p className="flex flex-row items-center gap-4 whitespace-pre-wrap max-sm:flex-col">
-            <MdEmail size={25} />
+          <p className="flex flex-row items-center gap-4 whitespace-pre-wrap text-sm sm:text-base">
+            <MdEmail size={20} />
             carlosadvogados.bs@gmail.com
           </p>
-          <p className="flex flex-row items-center gap-4 max-sm:flex-col">
-            <FaLocationPin size={25} />
-            Av. Leopoldino de Oliveira, 4113 - salas 220/221
+          <p className="flex flex-row items-center gap-4 text-sm sm:text-base text-center">
+            <FaLocationPin size={20} />
+            <span>Av. Leopoldino de Oliveira, 4113 - salas 220/221</span>
           </p>
         </div>
       </div>
